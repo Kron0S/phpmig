@@ -374,6 +374,7 @@ abstract class AbstractCommand extends Command
     protected function migrationToClassName( $migrationName )
     {
         $class = str_replace('_', ' ', $migrationName);
+		$class = 'Mig' . $class;
         $class = ucwords($class);
         return str_replace(' ', '', $class);
     }

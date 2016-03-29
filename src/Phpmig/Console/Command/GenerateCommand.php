@@ -75,9 +75,9 @@ EOT
 
         $path = realpath($path);
 
-        $migrationName = $this->transMigName($input->getArgument('name'));
+        $migrationName = date('YmdHis') . '_' . $this->transMigName($input->getArgument('name'));
 
-        $basename  = date('YmdHis') . '_' . $migrationName . '.php';
+        $basename  = $migrationName . '.php';
 
         $path = $path . DIRECTORY_SEPARATOR . $basename;
 
